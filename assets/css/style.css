@@ -1,0 +1,19 @@
+.randomNumber {
+    font-size: 50pt;
+}
+
+p {
+    font-size: 20pt !important;
+}
+
+h1 {
+    font-size: 25pt !important;
+}
+
+#playerScore {
+    font-size: 50pt !important;
+}
+
+#winloss {
+    font-size: 20pt !important;
+}

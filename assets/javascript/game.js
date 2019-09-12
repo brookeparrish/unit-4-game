@@ -6,21 +6,21 @@ $(document).ready(function () {
     let crystalValue3 = 0;
     let crystalValue4 = 0;
     let randomNumber = 0;
+    let playerScore = 0;
 
     function newGame() {
         playerScore = 0;
-        wins = 0;
-        losses = 0;
+        $("#playerScore").text(playerScore);
         crystalValue1 = Math.floor(Math.random() * (12 - 1)) + 1;
         crystalValue2 = Math.floor(Math.random() * (12 - 1)) + 1;
         crystalValue3 = Math.floor(Math.random() * (12 - 1)) + 1;
         crystalValue4 = Math.floor(Math.random() * (12 - 1)) + 1;
         randomNumber = Math.floor(Math.random() * (120 - 19)) + 19;
+        $("#randomNumber").text(randomNumber);
     }
 
     newGame();
-
-    $("#randomNumber").text(randomNumber);
+    
 
     $("#crystal1").click(function () {
         playerScore += crystalValue1;
@@ -51,19 +51,21 @@ $(document).ready(function () {
     }
 
 
-    let playerScore = 0;
-
     function checkScore() {
         if (playerScore === randomNumber) {
             wins++;
             $("#wins").text(wins);
+            newGame();
         } 
         if (playerScore > randomNumber) {
             losses++;            
             $("#losses").text(losses);
+            newGame();
         }
 
     }
+
+
 
    
 

@@ -6,41 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CrystalsCollector Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
 </head>
 
-<body>
+<body class="container bg-light">
 
-    <h1>CrystalsCollector!</h1>
-
-    <p>You will be given a random number at the start of the game.</p>
-    <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total
-        score.</p>
-    <p>You win the game by matching your total score to random number, you lose the game if your total score goes above
-        the random number.</p>
-    <p>The value of each crystal is hidden from you until you click on it.</p>
-    <p>Each time when the game starts, the game will change the values of each crystal.</p>
-
-    <div id="randomNumber"></div>
-    <div>
-        Wins: <span id="wins"></span>
-        <br>
-        Losses: <span id="losses"></span>
+    <div class="col-12 p-3 mb-2 bg-info text-white text-center">
+        <h1>CrystalsCollector!</h1>
     </div>
 
-    <div id="crystal1">hjadhfasfs</div>
-    <br>
-    <div id="crystal2">adfasdfs</div>
-    <br>
-    <div id="crystal3">adsfadsf</div>
-    <br>
-    <div id="crystal4">adfasfa</div>
+    <div class="p-2 mb-2 bg-primary text-black text-center font-weight-bold">
+        <p>You will be given a random number at the start of the game.</p>
+        <br>
+        <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your
+            total score.</p>
+        <br>
+        <p>You win the game by matching your total score to random number, you lose the game if your total score goes
+            above the random number.</p>
+        <br>
+        <p>The value of each crystal is hidden from you until you click on it.</p>
+        <br>
+        <p>Each time when the game starts, the game will change the values of each crystal.</p>
+        <br>
+    </div>
 
-    <p>Your total score is:</p>
+    <div class="p-1 mb-2 bg-info text-white font-weight-bold">
+        <div class="col-12 text-center randomNumber">Number to match
+            <br>
+        <span id ="randomNumber"></span></div>
 
-    <div id="playerScore"></div>
+        
+    </div>
+
+        <div class="p-1 mb-2 bg-dark text-white text-center">
+            <p>Your total score is</p>
+            <div id="playerScore"></div>
+        </div>
     
+        
+
+    <div class="row">
+        <div class="col-sm" id="crystal1"><img src="./assets/images/black.png" class="img-thumbnail"></div>
+        <br>
+        <div class="col-sm" id="crystal2"><img src="./assets/images/diamond.png" class="img-thumbnail"></div>
+        <br>
+        <div class="col-sm" id="crystal3"><img src="./assets/images/green.png" class="img-thumbnail"></div>
+        <br>
+        <div class="col-sm" id="crystal4"><img src="./assets/images/red.png" class="img-thumbnail"></div>
+    </div>  
+
+    
+
+    <div id="winloss" class="row font-weight-bold">
+            <div class="col-6 text-center p-2 mb-2 bg-success text-white">Wins: <span id="wins"></span></div>
+            <br>
+            <div class="col-6 text-center p-2 mb-2 bg-danger text-white">Losses: <span id="losses"></span></div>
+    </div>
+
 
 
 
